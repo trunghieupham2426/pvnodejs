@@ -1,0 +1,9 @@
+1. Callback là gì
+Là hàm được truyền qua đối số khi gọi hàm khác
+2. Callback hell là gì
+Callback hell là đoạn code có nhiều callback lồng vào nhau , khi mà callback phía trong bị ràng buộc bởi callback
+bên ngoài , cần dữ liệu của callback bên ngoài để chạy
+3. Để không gặp callback hell ??
+Thì dùng promises
+
+
