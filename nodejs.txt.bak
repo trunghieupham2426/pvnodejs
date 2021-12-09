@@ -7,3 +7,6 @@ NodeJs run in just one thread , if there's any heavy task , the event loop will 
 Event Loop cho phép NodeJs có thể xử lý đồng thời cùng lúc nhiều tác vụ mà không cần phải đợi tác vụ trước đó xử lý xong
 Khi các tác vụ hoàn tất, Event Loop sẽ trả kết quả về dưới dạng các callback."
 4. event driven
+5. middleware
+là function nằm giữa request obj và reponse nên gọi mà middleware , và middleware được viết phía trước sẽ chạy trước . oder rất quan trọng
+route cũng là middleware nên đặt ở cuối . vì khi send response là kết thúc req-res-cycle

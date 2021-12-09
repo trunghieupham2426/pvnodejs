@@ -6,6 +6,8 @@ bên ngoài , cần dữ liệu của callback bên ngoài để chạy
 3. Để không gặp callback hell ??
 Thì dùng promises
 4. hoisting
+js tự đưa phần khai báo biến lên trên khi khai báo với var và function declaration 
+class ko hoisted
 5. closure
 6. currying
 

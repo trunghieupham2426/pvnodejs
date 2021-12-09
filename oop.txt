@@ -1,0 +1,12 @@
+object tạo từ class được gọi là instances  of that class
+
+
+abstraction , enscapulation , inheritance , polymorphism
+truu tuong , tong hop , ke thua , da hinh
+
+trong js , ko bao giờ nên tạo  method trực tiếp trong function constructor
+bởi vì khi tạo 1 object instances , obj đó sẽ có tất cả method của function constructor 
+làm  ảnh hưởng đến performance khi có nhiều method
+
+
+
