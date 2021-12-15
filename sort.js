@@ -42,11 +42,22 @@ function insertionSort(arr) {
     while (j >= 0 && arr[j] > currentVal) {
       arr[j + 1] = arr[j];
       j--;
+      // console.log(arr);
+      // console.log("************");
     }
+    // console.log(arr);
     arr[j + 1] = currentVal;
+    // console.log("************");
+    // console.log(arr);
   }
 
   return arr;
 }
 
-console.log(insertionSort([1, 3, 2])); // kho lam . coi video nhieu lan moi hieu . neu quen coi lai
+console.log(insertionSort([1, 3, 2, 0])); // kho lam . coi video nhieu lan moi hieu . neu quen coi lai
+/*
+
+
+
+
+*/
