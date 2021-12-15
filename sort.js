@@ -48,7 +48,7 @@ function insertionSort(arr) {
   return arr;
 }
 
-console.log(insertionSort([1, 2, 3, 5, 4]));
+console.log(insertionSort([1, 3 ,2]));
 
 //0 3 4 1 2 -5 9
 //    i s
