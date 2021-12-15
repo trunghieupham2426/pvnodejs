@@ -1,23 +1,43 @@
-// class Person {
-//   constructor(name, birthday) {
-//     this.name = name;
-//     this.birthday = birthday;
-//   }
+// const user = {};
+// user.name = "David";
+// user.surname = "Xuan";
 
-//   get age() {
-//     return 2020 - this.birthday;
+// user.name = "cafe";
+// delete user.name;
+
+// function isEmpty(obj) {
+//   for (let key in obj) {
+//     if (obj.hasOwnProperty(key)) return true;
+//   }
+//   return false;
+// }
+
+// console.log(isEmpty({ name: "joe" }));
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// let sum = 0;
+
+// Object.values(salaries).forEach(function (el) {
+//   sum += el;
+// });
+
+// console.log(sum);
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu cafedev",
+// };
+
+// for (let key in menu) {
+//   if (typeof menu[key] === "number") {
+//     menu[key] *= 2;
 //   }
 // }
 
-// let joe = new Person("joe", 1991);
-// console.log(joe.age);
-
-const Person = {
-  calAge() {
-    return 2009 - this.birthday;
-  },
-};
-
-const joe = Object.create(Person);
-
-console.log(joe);
+// console.log(menu);

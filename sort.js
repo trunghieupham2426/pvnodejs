@@ -14,7 +14,7 @@ function bubbleSort(arr) {
   return arr;
 }
 
-console.log(bubbleSort([3, 1, 4, 2, 0]));
+//console.log(bubbleSort([3, 1, 4, 2, 0]));
 
 //  =========
 
@@ -32,15 +32,16 @@ function selectionSort(arr) {
   return arr;
 }
 
-console.log(selectionSort([3, 4, 1, 2, 9]));
+//console.log(selectionSort([3, 4, 1, 2, 9]));
 
 // //////
 function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let currentVal = arr[i];
-    for (let j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+    let j = i - 1;
+    while (j >= 0 && arr[j] > currentVal) {
       arr[j + 1] = arr[j];
-      console.log(i, j);
+      j--;
     }
     arr[j + 1] = currentVal;
   }
@@ -48,11 +49,4 @@ function insertionSort(arr) {
   return arr;
 }
 
-console.log(insertionSort([1, 3 ,2]));
-
-//0 3 4 1 2 -5 9
-//    i s
-// 0 1 3 4 2 -5 9
-//       i s
-// 0 1 2 3 4 -5 9
-//         i  s
+console.log(insertionSort([1, 3, 2])); // kho lam . coi video nhieu lan moi hieu . neu quen coi lai
