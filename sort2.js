@@ -3,12 +3,21 @@ function merge(arr1, arr2) {
   let i = 0;
   let j = 0;
   while (i < arr1.length && j < arr2.length) {
+<<<<<<< HEAD
     if (arr1[i] < arr2[j]) {
       result.push(arr1[i]);
       i++;
     } else {
       result.push(arr2[j]);
       j++;
+=======
+    if (arr1[i] > arr2[j]) {
+      result.push(arr2[j]);
+      j++;
+    } else {
+      result.push(arr1[i]);
+      i++;
+>>>>>>> 30038e88ec736db178eaeafa484a286fa095a51a
     }
   }
   while (i < arr1.length) {
@@ -19,7 +28,10 @@ function merge(arr1, arr2) {
     result.push(arr2[j]);
     j++;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30038e88ec736db178eaeafa484a286fa095a51a
   return result;
 }
 
@@ -30,3 +42,8 @@ function mergeSort(arr) {
   let right = mergeSort(arr.slice(middle));
   return merge(left, right);
 }
+<<<<<<< HEAD
+=======
+
+console.log(mergeSort([4, 1, 6, 0, 2, -1]));
+>>>>>>> 30038e88ec736db178eaeafa484a286fa095a51a
