@@ -110,9 +110,23 @@ class Singlylinklist {
     this.length--;
     return remove;
   }
-  // 1 3 4
+  // 1 3 4 2
 
-  reverse() {}
+  reverse() {
+    // swap head and tail
+    let current = this.head;
+    this.head = this.tail;
+    this.tail = current;
+    let prev = null;
+    let next = null;
+    for (let i = 0; i < this.length; i++) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    return this;
+  }
 }
 
 let list = new Singlylinklist();
