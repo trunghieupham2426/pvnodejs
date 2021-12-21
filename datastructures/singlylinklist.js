@@ -19,7 +19,7 @@ class Singlylinklist {
     } else {
       this.tail.next = newNode; // ko hieu thi coi lai bookmark nhe'
       this.tail = newNode;
-    }
+    } 
     this.length++;
     return this;
   }

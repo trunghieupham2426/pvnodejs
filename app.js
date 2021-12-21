@@ -41,3 +41,16 @@
 // }
 
 // console.log(menu);
+
+const data = {
+  name: "hieu",
+};
+
+localStorage.setItem("test", JSON.stringify(data));
+
+const localData = localStorage.getItem("test");
+console.log(JSON.parse(localData));
+
+sessionStorage.setItem("sst", JSON.stringify(data));
+const ssData = sessionStorage.getItem("sst");
+console.log(JSON.parse(ssData));
