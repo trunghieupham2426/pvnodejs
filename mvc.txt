@@ -1,5 +1,6 @@
 controller
 handle application request, interact with model , send back res to client ~~> application logic
+khi user vào website thì sẽ gửi đi request , sau đó controller sẽ xử lí request đó , lấy dữ liệu từ db rồi gửi lại response
 
 
 

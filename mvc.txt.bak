@@ -1,0 +1,5 @@
+controller
+handle application request, interact with model , send back res to client ~~> application logic
+
+
+

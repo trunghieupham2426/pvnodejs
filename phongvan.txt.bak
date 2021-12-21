@@ -1,0 +1,97 @@
+1.restful API
+là một tiêu chuẩn trong thiết kê API , dựa vào các http method GET , (PUT OR PATCH) , POST , DELETE
+chứ ko nên dựa vô URL. ví dụ  abc.com/getProduct , abc.com/updateProduct , abc.com/updateProduct ....
+Làm như vậy sẽ khó bảo trì , chỉ cần dùng các HTTP METHOD là đủ , abc.com/products 
+get ~> /products
+get one ~~> /products/:id
+patch or put ~~ > /products/:id
+delete ~~> /products/:id
+post ~~> /products
+
+Sau đó sẽ send respone lại dưới dạng JSON , có kiểu format như sau 
+{
+'status' : ...,
+'data' : ....
+}
+
+2. MVC
+MODEL , VIEW , CONTROLLER
+
+Khi user vào website , sẽ gửi đi một request . Request này sẽ được CONTROLLER xử lí , 
+tương tác với MODEL để lấy dữ liệu từ DB , sau đó sẽ send response có chứa data cho VIEW, dùng để render website
+3. MIDDLEWARE trong express
+
+MIDDLEWARE là các hàm nằm ở giữa Request và Response . MIDDLEWARE sẽ xử lí data trước khi lưu vào DB .
+Bản thân route trong express app cũng là một middleware . khi một respone được send lại cho client là
+kết thúc một request-respone cycle
+
+Vị trí các middleware rất quan trọng , được gọi là middleware stack . middleware phía trước sẽ chạy trước và gọi function
+next() để chạy middleware tiếp theo . nếu ko có next() thì middleware phía sau ko chạy được .
+Khi route send response rồi thì ko được gọi next() nữa , sẽ báo lỗi vì đã kết thúc request-respone cycle
+
+===============logic cơ bản==========
+1.login 
+khi login , FE sẽ gửi EMAIL và Password (POST METHOD)
+Đầu tiên là check trong DB có tồn tại email đó ko ~~> ko thì sẽ throw error.
+nếu email có tồn tại , sau đó sẽ hash cái password mới nhập , so sánh với password hashed đang lưu trong DB có giống nhau ko
+nếu giống nhau sẽ cho đăng nhập , và gửi lại 1 token . Sau này sẽ dùng token để authentication cho đến khi token hết hạn 
+2. Sign-up
+Sử dụng POST method để gửi các field cần thiết trong form , nếu thiếu thì báo lỗi
+Kiểm tra email đăng kí ko được trùng , và luôn luôn phải hash password trước khi lưu vào DB 
+3. Authentication
+Khi user login sẽ có token , token này được gửi kèm Header . Tách lấy token , kiểm tra lại token có đúng thông tin 
+của user trong DB ko ,nếu đúng rồi thì lấy thông tin user đó ra , gán vào req.user = UserData ... để sử dụng . và cho user truy cập các proteced route
+
+==============JS-NODEJS===================
+1 Nodejs là gì
+Nodejs là javascript runtime , là môi trường để chạy javascript bên ngoài trình duyệt , cụ thể là server
+2.NodeJs đơn luồng hay đa luồng?
+NodeJs chỉ chạy một luồng (single thread) , nếu có những task nặng thì EVENT LOOP sẽ chuyển những task đó sang 
+Thread POOL xử lý để tránh block code 
+3. event loop la gi ?
+NodeJs sử dụng một cơ chế có tên gọi là Event Loop để xử lý bất đồng bộ các tác vụ I/O
+Event Loop cho phép NodeJs có thể xử lý đồng thời cùng lúc nhiều tác vụ mà không cần phải đợi tác vụ trước đó xử lý xong
+Khi các tác vụ hoàn tất, Event Loop sẽ trả kết quả về dưới dạng các callback.
+4. event driven
+cái ni khó hiểu quáư. chỉ biết là event driven quan trọng ... dùng để đăng kí(regis event) và gọi event (emit event)
+5.data type trong js
+có 2 kiểu là value type (primitive ) và reference type
+reference type : object , function , array 
+còn lại là value type
+6.callback
+là hàm được truyền qua đối số khi gọi hàm khác . callback được sử dụng khi xử lí bất đồng bộ , hay để đợi các event trong
+addevent listener ...
+7.callback hell
+là các nested callback rất nhiêu level , callback phía trong sử dụng data của callback phía trước để chạy . làm cho 
+code khó đọc . để avoid callback hell thì sử dụng promises 
+8.hoisting
+trong js khi khai báo biến bằng var hoặc sử dụng function declaration . thì 2 cái này sẽ tự động được đưa lên phía trên
+9. var , let , const
+let và const khi dùng khai báo biến sẽ chịu ảnh hưởng của block scope , function scope
+var sẽ là global scope
+10.scope
+global scope : là phần nằm bên ngoài 
+function scope : là phần nằm trong function
+block scope : nằm trong dấu {} , ko tính object . ví dụ trong vòng lặp for , if else ...
+11. this keyword
+This phụ thuộc vào cách nó được gọi 
+Object call một method ~~> this chính là object đó 
+một function call thông thường . this là windows object
+trong addevent listener , this là cái element nhận event đó
+arrow function "ko có " this keyword , lưu ý 
+
+11. closure
+khi một function return 1 function , mà function được return sử dụng được biến khai báo bên trong function bên ngoài thì
+đó là closure . Sử dụng closure thường gặp trong lập trình OOP ở js , để xác định các biến private
+12.iife
+là function tự động call chính nó
+
+
+
+
+
+
+
+
+
+
