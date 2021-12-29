@@ -87,6 +87,20 @@ khi một function return 1 function , mà function được return sử dụng 
 là function tự động call chính nó
 
 
+=============OOP===================
+
+abstraction , enscapulation , inheritance , polymorphism
+truu tuong , đóng gói , ke thua , da hinh
+
+Ví dụ Person Class , sẽ là "bản thiết kế" chung cho "con người " , những người tên A,B,C ... chính là những đối tượng 
+
+trừu tượng : ẩn những chi tiết , "thông tin " ko cần thiết phải show ra bên ngoài . 
+Ví dụ một con người có thể bước đi. Cái gì đã làm đôi chân bước đi ko quan trọng phải show ra (bộ não sử dụng năng lượng , rồi điều khiển chân ... ko cần show ra)
+đóng gói : có những thứ bên trong con người phải được "keep private" , ko được access từ bên ngoài.
+Ví dụ đói bụng thì chỉ ăn thức ăn từ miệng , ko thể nào đưa thức ăn trực tiếp vào dạ dày :v 
+kế thừa : đối tượng A,B,C sẽ kế thừa những thuộc tính hay method mà Class Person có
+đa hình : Tùy vào từng đối tượng A,B,C ... mỗi đối tượng sẽ có thể overwirte lại method được kế thừa từ Parent class
+
 
 
 

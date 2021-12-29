@@ -1,3 +1,14 @@
+
+My name's Hieu , i'm 28 years old . At the beginning, 
+I join class  to learn Front End in 3 month , when i finish , i start learn Javascript 
+ again because I learn React before Javascript , 
+so i dont really deep understand . 
+During this time , i realize i love to learn BackEnd . 
+So I find an udemy course and start learning NOdejs in 6 month
+because i'm working while studying programing so it hard time . but i will try my best
+
+
+
 1.restful API
 là một tiêu chuẩn trong thiết kê API , dựa vào các http method GET , (PUT OR PATCH) , POST , DELETE
 chứ ko nên dựa vô URL. ví dụ  abc.com/getProduct , abc.com/updateProduct , abc.com/updateProduct ....
@@ -53,7 +64,11 @@ NodeJs sử dụng một cơ chế có tên gọi là Event Loop để xử lý 
 Event Loop cho phép NodeJs có thể xử lý đồng thời cùng lúc nhiều tác vụ mà không cần phải đợi tác vụ trước đó xử lý xong
 Khi các tác vụ hoàn tất, Event Loop sẽ trả kết quả về dưới dạng các callback.
 4. event driven
-cái ni khó hiểu quáư. chỉ biết là event driven quan trọng ... dùng để đăng kí(regis event) và gọi event (emit event)
+the Event Loop is where all the application code that is inside callback function is executed 
+khi có HTTP request , timer expried , finished file reading ... sẽ emit (phát ra) event 
+ngay sau khi hoàn thành công việc . Lúc này event loop sẽ pickup event được emit đó , gọi callback function
+tương ứng để thực thi
+tóm lại là event loop nhận các event , gọi callback function tương ứng , và offload các heavy task to thread pool
 5.data type trong js
 có 2 kiểu là value type (primitive ) và reference type
 reference type : object , function , array 
