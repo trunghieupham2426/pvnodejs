@@ -57,8 +57,9 @@ của user trong DB ko ,nếu đúng rồi thì lấy thông tin user đó ra , 
 1 Nodejs là gì
 Nodejs là javascript runtime , là môi trường để chạy javascript bên ngoài trình duyệt , cụ thể là server
 2.NodeJs đơn luồng hay đa luồng?
-NodeJs chỉ chạy một luồng (single thread) , nếu có những task nặng thì EVENT LOOP sẽ chuyển những task đó sang 
-Thread POOL xử lý để tránh block code 
+"NodeJs đơn luồng nghĩa là nói tới việc trong NodeJs chỉ có một tác vụ Javascript được xử lý tại một thời điểm
+Bản thân NodeJs khi chạy sử dụng một luồng chính để thực thi Javascript, là nơi event loop chạy và một thread pool
+ chứa 4 luồng để Node dùng cho các xử lý nội bộ"
 3. event loop la gi ?
 NodeJs sử dụng một cơ chế có tên gọi là Event Loop để xử lý bất đồng bộ các tác vụ I/O
 Event Loop cho phép NodeJs có thể xử lý đồng thời cùng lúc nhiều tác vụ mà không cần phải đợi tác vụ trước đó xử lý xong
@@ -103,6 +104,7 @@ là function tự động call chính nó
 
 
 =============OOP===================
+OOP (viết tắt của Object Oriented Programming) – lập trình hướng đối tượng là một phương pháp lập trình dựa trên khái niệm về lớp và đối tượng.
 
 abstraction , enscapulation , inheritance , polymorphism
 truu tuong , đóng gói , ke thua , da hinh
@@ -124,3 +126,16 @@ kế thừa : đối tượng A,B,C sẽ kế thừa những thuộc tính hay m
 
 
 
+
+cách 1 là gửi post request đến api
+cách 2 . trong thẻ form gắn thêm 1 thuộc tính action = 'route .. để nhận data' , method = 'post'.
+data được post lên được chỉ định bằng thuộc tính name trong các thẻ input
+khi nhấn nút submit thì form này tự động gửi post request , kèm data mà ko cần phải xử lí bằng js
+phía server cần 1 middleware để đọc được req.body 
+app.use(express.urlendcode())
+
+
+
+event driven là cấu trúc mà khi phát ra sự kiện thì event loop sẽ lắng nghe sự kiện đó rồi gọi callback tương ứng
+event trong nodejs có 2 loại 
+system event và custom event

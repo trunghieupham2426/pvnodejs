@@ -1,3 +1,14 @@
+
+My name's Hieu , i'm 28 years old . At the beginning, 
+I join class  to learn Front End in 3 month , when i finish , i start learn Javascript 
+ again because I learn React before Javascript , 
+so i dont really deep understand . 
+During this time , i realize i love to learn BackEnd . 
+So I find an udemy course and start learning NOdejs in 6 month
+because i'm working while studying programing so it hard time . but i will try my best
+
+
+
 1.restful API
 là một tiêu chuẩn trong thiết kê API , dựa vào các http method GET , (PUT OR PATCH) , POST , DELETE
 chứ ko nên dựa vô URL. ví dụ  abc.com/getProduct , abc.com/updateProduct , abc.com/updateProduct ....
@@ -46,14 +57,19 @@ của user trong DB ko ,nếu đúng rồi thì lấy thông tin user đó ra , 
 1 Nodejs là gì
 Nodejs là javascript runtime , là môi trường để chạy javascript bên ngoài trình duyệt , cụ thể là server
 2.NodeJs đơn luồng hay đa luồng?
-NodeJs chỉ chạy một luồng (single thread) , nếu có những task nặng thì EVENT LOOP sẽ chuyển những task đó sang 
-Thread POOL xử lý để tránh block code 
+"NodeJs đơn luồng nghĩa là nói tới việc trong NodeJs chỉ có một tác vụ Javascript được xử lý tại một thời điểm
+Bản thân NodeJs khi chạy sử dụng một luồng chính để thực thi Javascript, là nơi event loop chạy và một thread pool
+ chứa 4 luồng để Node dùng cho các xử lý nội bộ"
 3. event loop la gi ?
 NodeJs sử dụng một cơ chế có tên gọi là Event Loop để xử lý bất đồng bộ các tác vụ I/O
 Event Loop cho phép NodeJs có thể xử lý đồng thời cùng lúc nhiều tác vụ mà không cần phải đợi tác vụ trước đó xử lý xong
 Khi các tác vụ hoàn tất, Event Loop sẽ trả kết quả về dưới dạng các callback.
 4. event driven
-cái ni khó hiểu quáư. chỉ biết là event driven quan trọng ... dùng để đăng kí(regis event) và gọi event (emit event)
+the Event Loop is where all the application code that is inside callback function is executed 
+khi có HTTP request , timer expried , finished file reading ... sẽ emit (phát ra) event 
+ngay sau khi hoàn thành công việc . Lúc này event loop sẽ pickup event được emit đó , gọi callback function
+tương ứng để thực thi
+tóm lại là event loop nhận các event , gọi callback function tương ứng , và offload các heavy task to thread pool
 5.data type trong js
 có 2 kiểu là value type (primitive ) và reference type
 reference type : object , function , array 
@@ -89,6 +105,7 @@ là function tự động call chính nó
 
 =============OOP===================
 
+
 abstraction , enscapulation , inheritance , polymorphism
 truu tuong , đóng gói , ke thua , da hinh
 
@@ -109,3 +126,16 @@ kế thừa : đối tượng A,B,C sẽ kế thừa những thuộc tính hay m
 
 
 
+
+cách 1 là gửi post request đến api
+cách 2 . trong thẻ form gắn thêm 1 thuộc tính action = 'route .. để nhận data' , method = 'post'.
+data được post lên được chỉ định bằng thuộc tính name trong các thẻ input
+khi nhấn nút submit thì form này tự động gửi post request , kèm data mà ko cần phải xử lí bằng js
+phía server cần 1 middleware để đọc được req.body 
+app.use(express.urlendcode())
+
+
+
+event driven là cấu trúc mà khi phát ra sự kiện thì event loop sẽ lắng nghe sự kiện đó rồi gọi callback tương ứng
+event trong nodejs có 2 loại 
+system event và custom event
